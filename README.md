@@ -1,21 +1,16 @@
 # Hands On Cloud Migration for Managers
 
 ## Abstract
-In the past decade, cloud technologies have revolutionized the way software is
-architected, developed, and deployed. The ability to instantaneously respond to
-market demands with feature rich, low cost solutions is the new norm. Modern
-organizations must either rise to the challenge or risk obsolescence. This new
-software paradigm represents an almost intractable dilemma for managers. 
-
-The cloud is a highly technical space that is constantly evolving. Today's
-managers attempt to cohere countless cloud concepts from power point slides and
-cartoons which provide incomplete abstractions. The resulting understanding is
-rarely sufficient for meaningful decision making. This workshop aims to remedy
-that by giving participants the opportunity to perform a real migration on an
-archetypal business application (no coding skills required).
+The cloud is a highly technical, constantly evolving space. To keep up, managers
+try to cobble together countless cloud concepts from power point slides and
+cartoons that provide incomplete abstractions. Consequently, their understanding
+is rarely sufficient for meaningful decision making. This workshop aims to
+remedy this situation by giving participants the opportunity to perform a real
+cloud migration on an archetypal business application (no coding skills
+required).
 
 The workshop starts with a typical business application running on a local
-machine. All attendees will be divided into one of six groups and each group
+machine. All participants will be divided into one of six groups, and each group
 will be responsible for migrating the application to the cloud. A global
 dashboard will track the state of each team's application and correlate
 management objectives to tangible technical tasks. Expect to gain a ground truth
