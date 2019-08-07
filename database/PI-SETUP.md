@@ -41,13 +41,13 @@ sudo systemctl restart mysql.service
 sudo systemctl restart mariadb.service
 ```
 
-# Create database and user
+# Create database, tables, and user
 Terminate any ssh sessions if they are currently open
 
 Transfer the sql script to the pi by running the following command from this git
 repos root directory
 ```bash
-scp database/create_database.sql pi@192.168.1.4:~/create_database.sql
+scp database/* pi@192.168.1.4:~/scripts/
 // When prompted for password, type IShouldBeInTheCloud
 ```
 
@@ -57,6 +57,7 @@ ssh pi@192.168.1.4
 // When prompted for password, type IShouldBeInTheCloud
 
 mysql -u root -p < create_database.sql
+mysql -u root -p < create_table.sql
 // When prompted for password, type IShouldBeInTheCloud
 ```
 

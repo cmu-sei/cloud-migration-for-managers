@@ -23,6 +23,11 @@
 
     [Docs](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
 
+- Required packages
+    ``` bash
+    sudo apt install mariadb-client sshpass -y
+    ```
+
 ## Pi Configuration
 - Router
     Router Admin: 192.168.1.1
