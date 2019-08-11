@@ -1,0 +1,12 @@
+footer {
+  background-color: #333333;
+  min-height: 100px;
+}
+
+header {
+  background-image: url(./header-background.jpg);
+}
+
+.pun {
+  min-height: 150px;
+}
