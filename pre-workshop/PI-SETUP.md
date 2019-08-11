@@ -71,11 +71,16 @@ sudo apt autoremove
 
 Install Git Server
 ```bash
-sshpass -p IShoudBeInTheCloud ssh pi@192.168.1.3
+sshpass -p IShouldBeInTheCloud ssh pi@192.168.1.3
 sudo apt install wget git-core -y
 
 // Create the initial repo
-mkdir cloud-migration-for-managers
-cd cloud-migration-for-managers/
+mkdir cloud-migration-for-managers.git
+cd cloud-migration-for-managers.git
 git init --bare
+```
+
+Push this repo, to the pi - make sure you do this locally, not on the pi
+
+```bash
 ```
