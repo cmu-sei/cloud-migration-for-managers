@@ -1,5 +1,6 @@
 import React from 'react';
 import Pun from './Pun';
+import {getRndInteger} from './utilities';
 
 export interface IPun {
   pun: string;
@@ -23,6 +24,7 @@ class Puns extends React.Component<IPunsProps, IPunsState> {
 
     this.previousPun = this.previousPun.bind(this);
     this.nextPun = this.nextPun.bind(this);
+    this.randomPun = this.randomPun.bind(this);
   }
 
   previousPun() {
@@ -39,7 +41,16 @@ class Puns extends React.Component<IPunsProps, IPunsState> {
     }));
   }
 
+  randomPun() {
+    this.setState(state => ({
+      ...state,
+      selectedIndex: getRndInteger(0, this.props.puns.length),
+    }));
+  }
+
   render() {
+    if (this.props.puns.length === 0) return null;
+
     const prevDisabled = this.state.selectedIndex === 0;
     const nextDisabled =
       this.state.selectedIndex === this.props.puns.length - 1;
@@ -60,6 +71,11 @@ class Puns extends React.Component<IPunsProps, IPunsState> {
                   onClick={this.previousPun}
                   disabled={prevDisabled}>
                   <i className="fa fa-chevron-circle-left"></i> Previous
+                </button>
+              </li>
+              <li className="page-item">
+                <button className="page-link" onClick={this.randomPun}>
+                  Random
                 </button>
               </li>
               <li className={'page-item' + (nextDisabled ? ' disabled' : '')}>

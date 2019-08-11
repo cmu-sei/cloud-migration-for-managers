@@ -35,8 +35,8 @@
     Password: <redacted>
 
     Wireless
-    SSID: NETGEAR35 or NETGEAR35-5G
-    Key: deepraven021
+    SSID: SCSS-DEMO or SCSS-DEMO-5G
+    Key: ILoveTheCloud
 
 - Git Server
     192.168.1.3

@@ -3,7 +3,7 @@ import Puns, {IPun} from './Puns';
 import Loading from './Loading';
 import AppError from './AppError';
 import Footer from './Footer';
-import Header from './Header'
+import Header from './Header';
 
 enum AppState {
   LOADING,
@@ -15,7 +15,7 @@ interface IAppProps {}
 
 interface IAppState {
   appState: AppState;
-  puns: Array<IPun>;
+  puns: IPun[];
 }
 
 class App extends React.Component<IAppProps, IAppState> {
@@ -25,13 +25,12 @@ class App extends React.Component<IAppProps, IAppState> {
   };
 
   componentDidMount() {
-    fetch('http://192.168.1.6:8080/api/puns')
+    fetch(`${process.env.REACT_APP_PUN_API}puns`)
       .then(resp => resp.json())
       .then(data => {
         this.setState(state => ({
           ...state,
           puns: data,
-          count: data.length,
           appState: AppState.READY,
         }));
       })

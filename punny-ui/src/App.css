@@ -1,6 +1,19 @@
-footer {
-  background-color: #333333;
-  min-height: 100px;
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 header {
@@ -9,4 +22,15 @@ header {
 
 .pun {
   min-height: 150px;
+}
+
+footer {
+  background-color: #333333;
+  min-height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }

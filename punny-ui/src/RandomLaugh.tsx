@@ -1,4 +1,5 @@
 import React from 'react';
+import {getRndInteger} from './utilities'
 
 interface RandomLaughProps {}
 
@@ -16,16 +17,13 @@ const icons = [
   'fa-laugh',
 ];
 
-function getRndInteger(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
 const Pun: React.FC<RandomLaughProps> = props => {
-  const thisFill = fill[getRndInteger(0, 1)];
-  const thisIcon = icons[getRndInteger(0, icons.length)];
+  const fillIndex = getRndInteger(0, 2);
+  const iconIndex = getRndInteger(0, icons.length);
+  const className = `${fill[fillIndex]} ${icons[iconIndex]}`
   return (
-    <h1>
-      <i className={`${thisFill} ${thisIcon}`}></i>
+    <h1 key={className}>
+      <i className={className}></i>
     </h1>
   );
 };

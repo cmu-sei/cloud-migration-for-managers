@@ -21,9 +21,6 @@ const Pun: React.FC<PunProps> = (props: PunProps) => {
         <div className="col">
           <RandomLaugh />
         </div>
-        <div className="col">
-          <RandomLaugh />
-        </div>
       </div>
       <div className="row">
         <div className="col">
@@ -31,9 +28,6 @@ const Pun: React.FC<PunProps> = (props: PunProps) => {
         </div>
       </div>
       <div className="row">
-        <div className="col">
-          <RandomLaugh />
-        </div>
         <div className="col">
           <RandomLaugh />
         </div>
