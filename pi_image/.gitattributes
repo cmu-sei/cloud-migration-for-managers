@@ -1,1 +1,0 @@
-2019-07-10-raspbian-buster-lite.zip filter=lfs diff=lfs merge=lfs -text
