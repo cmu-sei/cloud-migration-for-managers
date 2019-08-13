@@ -119,8 +119,6 @@ sudo mysql_secure_installation
 
 The root password is now **IShouldBeInTheCloud**
 
-
-
 Configure remote login
 ``` bash
 # edit this file

@@ -1,3 +1,5 @@
+# Migration git code repository to Azure
+
 ## Pull existing repository
 1. Launch the WSL Ubuntu command line application
 1. Clone the existing code repository to your local machine
@@ -17,7 +19,6 @@
     # disconnect from the pi repo
     git remote remove origin
     ```
-
 
 ## Create a new project
 1. Navigate to
@@ -54,3 +55,4 @@
    previous section.
 1. Click the [Files] Icon under [Repos] on the left hand side of the screen and
    take a few minutes to peruse the code base.
+
