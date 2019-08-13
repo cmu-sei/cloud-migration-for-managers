@@ -168,7 +168,7 @@ sshpass -p IShouldBeInTheCloud ssh pi@192.168.1.6
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install default-jre -y
+sudo apt install default-jre mariadb-client -y
 
 sudo vi /etc/rc.local
 # Add /home/pi/start_app.bash before exit 0
