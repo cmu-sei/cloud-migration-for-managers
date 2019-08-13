@@ -19,6 +19,10 @@ sudo apt upgrade -y
 sudo apt autoremove
 
 sudo apt install mariadb-client default-jre sshpass -q
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo chown -R $(whoami) ~/.npm
+sudo chown -R $USER:$(id -gn $USER) /home/scss-demo-user/.config
 
 # Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash

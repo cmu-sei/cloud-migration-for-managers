@@ -46,7 +46,7 @@
     ```
 
 ## Update local application to use Azure database
-1. Edit the application to point to the Azure database
+1. Edit the application to point to the Azure database by editing
    `cloud-migration-for-managers/punny-api/src/main/resources/application.properties`
     - Change `spring.datasource.url =
         jdbc:mariadb://192.168.1.4:3306/scss_punny_db?useSSL=false` to
@@ -63,5 +63,4 @@
     ssh-keyscan 192.168.1.6 >> ~/.ssh/known_hosts
     ./pi_deploy.bash
     ```
-1. Wait for application to load, at that point it will be getting data from the
-   cloud
+1. Press <Ctrl>+C at any time to disconnect the ssh session
