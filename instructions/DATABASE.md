@@ -29,22 +29,39 @@
 1. Click the [Save] button near the top of the screen.
 
 ## Create database and transfer data
-1. Launch the Ubuntu shell
 1. Obtain login information from the Azure portal
     - From the Azure portal, select the [All resources] link on the left hand
         side of the screen
     - Click on the [scss-demo-sql] link
     - Notice the *Server Name* and *Server admin login name* values
+1. Launch the Ubuntu shell
 1. Connect to the database and create resources
     ``` bash
     cd cloud-migration-for-managers/punny-db/
     mysql -h <Server name> -u <Server admin login name> --password='scsspassword!1'
 
     # Inside SQL Shell
-    source ./cloud_setup.sql
+    source ./cloud_setup.sql;
     exit
     ```
 
 ## Update local application to use Azure database
-
-cloud-migration-for-managers/punny-api/src/main/resources/application.properties
+1. Edit the application to point to the Azure database
+   `cloud-migration-for-managers/punny-api/src/main/resources/application.properties`
+    - Change `spring.datasource.url =
+        jdbc:mariadb://192.168.1.4:3306/scss_punny_db?useSSL=false` to
+        `spring.datasource.url =
+        jdbc:mariadb://<Server name>:3306/scss_punny_db?useSSL=false`
+    - Change `spring.datasource.username = scss-user` to
+        `spring.datasource.username = <Server admin login name>`
+    - Change `spring.datasource.password = scss-password` to
+        `spring.datasource.password = scsspassword!1`
+1. Launch the Ubuntu shell
+1. Execute the pi deployment script
+    ``` bash
+    cd cloud-migration-for-managers/punny-db/
+    ssh-keyscan 192.168.1.6 >> ~/.ssh/known_hosts
+    ./pi_deploy.bash
+    ```
+1. Wait for application to load, at that point it will be getting data from the
+   cloud

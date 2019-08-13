@@ -18,7 +18,7 @@ sudo apt udpate
 sudo apt upgrade -y
 sudo apt autoremove
 
-sudo apt install mariadb-client -q
+sudo apt install mariadb-client default-jre sshpass -q
 
 # Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
