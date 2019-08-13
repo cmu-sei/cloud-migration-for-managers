@@ -35,10 +35,16 @@
         side of the screen
     - Click on the [scss-demo-sql] link
     - Notice the *Server Name* and *Server admin login name* values
-1. Connect to the database
+1. Connect to the database and create resources
     ``` bash
     cd cloud-migration-for-managers/punny-db/
     mysql -h <Server name> -u <Server admin login name> --password='scsspassword!1'
-    ```
-1. Run script to create the database
 
+    # Inside SQL Shell
+    source ./cloud_setup.sql
+    exit
+    ```
+
+## Update local application to use Azure database
+
+cloud-migration-for-managers/punny-api/src/main/resources/application.properties
