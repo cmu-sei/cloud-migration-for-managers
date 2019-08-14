@@ -98,12 +98,10 @@ Take note of appId and password
 
 ``` bash
 # Get the AZR resource ID and store it a variable
-ACRID=`az acr show --name hhfacr --resource-group letskube --query id --output
-tsv`
+ACRID=`az acr show --name hhfacr --resource-group letskube --query id --output tsv`
 
 # Assign the reader role to the service principal
-az role assignment create --assignee "96132a5c-7f2a-48d6-9b4f-0ba6d6757dd6"
---role Reader --scope $ACRID
+az role assignment create --assignee "96132a5c-7f2a-48d6-9b4f-0ba6d6757dd6" --role Reader --scope $ACRID
 ```
 
 ## Pricing Calculator

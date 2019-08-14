@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: punny-api-service
+spec:
+  selector:
+    app: punny-api
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  type: LoadBalancer
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: punny-ui-service
+spec:
+  selector:
+    app: punny-ui
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  type: LoadBalancer
+  

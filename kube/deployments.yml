@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: punny-api-deployment
+  labels:
+    app: punny-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: punny-api
+      labels:
+        app: punny-api
+    spec:
+      containers:
+      - name: punny-api
+        image: scsspunnyreg.azurecr.io/punny-api:1.0
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: punny-api
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: punny-ui-deployment
+  labels:
+    app: punny-ui
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: punny-ui
+      labels:
+        app: punny-ui
+    spec:
+      containers:
+      - name: punny-ui
+        image: scsspunnyreg.azurecr.io/punny-ui:1.0
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: punny-ui

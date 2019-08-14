@@ -63,8 +63,8 @@
     # Start the server
     ssh scss-user@<Public IP address> sudo java -jar punny-api-0.0.1-SNAPSHOT.jar --server.port=80
     ```
-1. Navigate to http://<Public IP address>/api/puns to validate that the service is
-   properly configured.
+1. Navigate to http://<Public IP address>/api/puns to validate that the service
+   is properly configured.
 
 ## Punny HTML
 1. Navigate to the Azure portal at
@@ -75,7 +75,7 @@
 1. Choose *Ubuntu Server 18.04 LTS] from the list of popular resources.
 1. Fill out the *Create a virtual machine* form
     - *Resource group*: **scss-demo**
-    - *Virtual machine name*: **scss-demo-rest**
+    - *Virtual machine name*: **scss-demo-html**
     - *Authentication Type*: **SSH public key**
     - *Username*: **scss-user**
     - *SSH public key*: Copy and paste the output of `cat ~/.ssh/id_rsa.pub`
@@ -100,49 +100,6 @@
     sudo /etc/init.d/nginx start
     sudo reboot now
     ```
-
-Disconnect from any ssh sessions and run the following script from the punny-ui
-directory to build and deploy the front end code.
-
-``` bash
-./pi_deploy.bash
-```
-
-The application can be redeployed at any time by re-running the above script.
-
-
-## Create SQL VM
-1. Navigate to the Azure portal at
-   [portal.azure.com/](https://portal.azure.com/)
-1. Authenticate with your supplied credentials
-1. If you see a *Welcome to Microsoft Azure* dialog box, dismiss it.
-1. Choose [+ Create a Resource] in the upper left hand corner of the screen.
-1. Choose *Ubuntu Server 18.04 LTS] from the list of popular resources.
-1. Fill out the *Create a virtual machine* form
-    - *Resource group*: **scss-demo**
-    - *Virtual machine name*: **scss-demo-html**
-    - *Authentication Type*: **SSH public key**
-    - *Username*: **scss-user**
-    - *SSH public key*: Copy and paste the output of `cat ~/.ssh/id_rsa.pub`
-    - *Public inbound ports*: **Allow selected ports**
-    - *Select inbound ports*: **SSH, HTTP**
-    - Select default values for all other options
-    - Click [Review + create] button.
-    - Click [Create] button.
-1. Wait for the *Your deployment is underway* message to go away...
-1. Click the [Go to resource] button.
-1. Note the *Public IP address*
-1. Install the latest updates and nginx
-    ``` bash
-    ssh scss-user@<Public IP address>
-    # Answer **yes** to the authenticity of host question
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove
-
-    sudo apt install nginx -y
-    sudo /etc/init.d/nginx start
-    ```
 1. Edit the application to point to the new REST endpoint running in Azure by
    editing
    `cloud-migration-for-managers/punny-ui/.env`
@@ -155,3 +112,5 @@ The application can be redeployed at any time by re-running the above script.
     scp -r ./build/* scss-user@<Public IP address>:~/
     ssh scss-user@<Public IP address> "sudo mv ~/* /var/www/html"
     ```
+1. Navigate to http://<Public IP address> to view the apps running in VMs in the
+   cloud

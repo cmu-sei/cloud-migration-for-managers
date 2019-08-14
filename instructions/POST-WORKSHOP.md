@@ -10,3 +10,9 @@ Each account will need to be cleaned up and all resources removed.
 1. Click the [Delete] button at the bottom of the screen.
 1. Type **cloud-migration-for-managers** into the *project name* text box.
 1. Click the [Delete] button.
+
+## Delete all azure resources
+``` bash
+az login
+az group delete -n scss-demo
+```
