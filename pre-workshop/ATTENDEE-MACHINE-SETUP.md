@@ -68,3 +68,4 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ## Notes
 - Azure CLI
     [Docs](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+- [Pricing Calculator](https://azure.microsoft.com/is-is/pricing/calculator/)
