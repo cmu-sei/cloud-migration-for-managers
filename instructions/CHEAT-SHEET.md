@@ -2,6 +2,14 @@
 username: **scss-demo-user**
 password: **ILoveTheCloud**
 
+# Maria DB
+- Pi
+    User: scss-user
+    Password: scss-password
+- Azure
+    User: scss-user
+    Password: scsspassword!1
+
 # Pi Network
 - Router
     Wireless

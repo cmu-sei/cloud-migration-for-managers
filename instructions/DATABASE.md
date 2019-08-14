@@ -1,4 +1,4 @@
-# Migrate Database to Azure
+# Migrate database to Azure
 
 ## Create MariaDB
 1. Navigate to the Azure portal at
