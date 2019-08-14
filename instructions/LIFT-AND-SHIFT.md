@@ -183,3 +183,12 @@ cat ~/.ssh/id_rsa.pub
 
 Congratulate yourself! You have successfully migrated your entire application to
 the cloud. The data center is no more!
+
+## Delete the existing VMs
+There are spending limits on the demo accounts, so we must delete the existing
+VMs in order to create our Kubernetes cluster. This is a slow command so kick it
+off before a break.
+
+``` bash
+az vm delete --ids $(az vm list -g scss-demo --query "[].id" -o tsv) --yes
+```
