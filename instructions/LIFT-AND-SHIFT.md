@@ -108,6 +108,11 @@
 1. Rebuild and deploy the application
     ``` bash
     npm install
+
+    # if you get an error, run the following two statements and try again
+    # sudo chown -R $(whoami) ~/.npm
+    # sudo chown -R $USER:$(id -gn $USER) /home/scss-demo-user/.config
+
     npm run build
     scp -r ./build/* scss-user@<Public IP address>:~/
     ssh scss-user@<Public IP address> "sudo mv ~/* /var/www/html"

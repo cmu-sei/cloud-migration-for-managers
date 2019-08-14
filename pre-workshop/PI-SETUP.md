@@ -213,36 +213,3 @@ directory to build and deploy the front end code.
 
 The application can be redeployed at any time by re-running the above script.
 
-## Quick Reference
-- Router
-    Router Admin: 192.168.1.1
-    User: admin
-    Password: <redacted>
-
-    Wireless
-    SSID: SCSS-DEMO or SCSS-DEMO-5G
-    Key: ILoveTheCloud
-
-- Git Server
-    192.168.1.3
-    Hostname: scss-demo-git
-    User: pi
-    Password: IShouldBeInTheCloud
-
-- SQL Server
-    192.168.1.4
-    Hostname: scss-demo-sql
-    User: pi
-    Password: IShouldBeInTheCloud
-
-- Web Server
-    192.168.1.5
-    Hostname: scss-demo-html
-    User: pi
-    Password: IShouldBeInTheCloud
-
-- REST Server
-    192.168.1.6
-    Hostname: scss-demo-rest
-    User: pi
-    Password: IShouldBeInTheCloud
