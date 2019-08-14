@@ -106,8 +106,11 @@ cat ~/.ssh/id_rsa.pub
     # End the ssh session
     <Ctrl+C>
     ```
-1. Navigate to http://**{PUBLIC IP ADDRESS}**/api/puns to validate that the
-   service is properly configured.
+1. Navigate to the api end point to validate that the service is properly
+   configured.
+   ```bash
+   cmd.exe /c start http://$PUNNY_API_IP/api/puns
+   ```
 
 ## Punny UI
 1. Navigate to the Azure portal at
@@ -178,8 +181,10 @@ cat ~/.ssh/id_rsa.pub
     scp -r ./build/* scss-user@$PUNNY_UI_IP:~/
     ssh scss-user@$PUNNY_UI_IP "sudo mv ~/* /var/www/html"
     ```
-1. Navigate to http://{**PUBLIC IP ADDRESS**} to view the apps running in VMs in
-   the cloud
+1. Navigate to the site to view the apps running in VMs in the cloud
+   ``` bash
+   cmd.exe /c start http://$PUNNY_UI_IP
+   ```
 
 Congratulate yourself! You have successfully migrated your entire application to
 the cloud. The data center is no more!

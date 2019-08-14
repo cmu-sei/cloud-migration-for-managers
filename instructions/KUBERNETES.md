@@ -108,7 +108,9 @@ az login
     ``` bash
     kubectl apply -f deployments.yml
     ```
-1. Navigate to http://**{PUNNY-UI EXTERNAL IP}** to see the application
+1. Navigate to the UI IP address to see the application
+   ```bash
+   cmd.exe /c start http://$KUBE_UI_IP/api/puns
 
 Congratulate yourself! You have successfully migrated to a cloud native
-application running in kubernetes.
+application running on the kubernetes platform.
