@@ -1,4 +1,4 @@
-# Migration git code repository to Azure
+# Migrate git code repository to Azure
 
 ## Pull existing repository
 1. Launch the WSL Ubuntu command line application
@@ -32,27 +32,51 @@
     - Click the [+ Create Project] button
 
 ## Create a personal access token
-1. Click on your identity icon in the upper right hand corner of the screen
-1. Choose *Security* from the drop down list
+1. Click on your identity icon in the upper right hand corner of the screen and
+   choose *Security* from the drop down list
+
+    ![identity icon](./identity-icon-security.png)
+
 1. Click the [+ New Token] button
+
+    ![New Token](./new-token.png)
+
 1. Fill out the *Create a new personal access token* form
     - *Name*: **scss-demo**
     - *Scopes*: **Full access**
     - Leave remaining values as default
     - Click the [Create] button
+
+    ![Create Token](./create-token.png)
+
 1. Copy the *temp token* and put it somewhere that you access later.
     - One option is to paste the token into notepad document and save it on your
         desktop
 
 ## Push the code to the new project
 1. Click the [Azure DevOps] link in the upper left hand corner
+
+    ![Azure DevOps](./azure-devops.png)
+
 1. Click the [cloud-migration-for-managers] project to open it
-1. Copy the [Repos] link on the left hand side of the screen
+
+    ![Project Link](./project-link.png)
+
+1. Click the [Repos] link on the left hand side of the screen
+
+    ![Repos Link](./repos.png)
+
 1. Copy the code from [or push an existing repository from command line]
    section.
+
+    ![Push existing code](./push-existing.png)
+
 1. Paste the code into your Ubuntu shell
 1. When prompted for a password, supply the temporary token created in the
    previous section.
 1. Click the [Files] Icon under [Repos] on the left hand side of the screen and
    take a few minutes to peruse the code base.
+
+    ![Files link](./files.png)
+
 
