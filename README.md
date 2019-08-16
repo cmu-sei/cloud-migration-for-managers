@@ -35,5 +35,19 @@ programming, you can find him studying philosophy or lifting heavy things in the
 gym and generally being a menace.
 
 ### Eric Alan Bram
-{INSERT YOUR BIO HERE}
+Eric is currently on a special assignment at the Kessel Run Experimentation Lab
+(KREL), providing technical guidance and hands-on assistance to improve the
+Security and DevOps posture. His normal position is a software developer
+creating platforms and accompanying technologies that support the Marine Corps
+under the Cyber Workforce Development directorate in CERT. Object-oriented
+software development, DevOps and SecDevOps rank amount his top interests.
+
+Previously, Eric was a software developer focused on embedded development
+primarily in the audio industry. His positions there included Software
+Developer, System Administrator, and a team lead. He was in charge of handling
+the company’s primary contract with Texas Instruments (TI) embedded audio
+division, where graphical user interfaces (GUIs) and accompanying low-level
+audio processing code were written for TI hardware chips. An M.S. degree with a
+focus on Security led him to pursue additional areas of work outside of software
+development.
 
