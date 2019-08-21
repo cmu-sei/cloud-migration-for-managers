@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.6/c3.min.css"
+          rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.6/c3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.11.0/d3.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-5">
+          <h1>SCSS Management Objectives</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="objective1"></div>
+        </div>
+        <div class="col" >
+          <div id="objective2"></div>
+        </div>
+        <div class="col" >
+          <div id="objective3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="objective4"></div>
+        </div>
+        <div class="col" >
+          <div id="objective5"></div>
+        </div>
+        <div class="col" >
+          <div id="objective6"></div>
+        </div>
+      </div>
+  </body>
+
+  <script>
+function chartBuilder(domId, name, percentComplete) {
+  return {domId, name, percentComplete};
+}
+
+const charts = [
+  chartBuilder('objective1', 'Upgrade Infrastructure', 100),
+  chartBuilder('objective2', 'No Downtime Deployments', 100),
+  chartBuilder('objective3', 'Dev Innovation Resources', 100),
+  chartBuilder('objective4', 'Bandwidth for Growth', 100),
+  chartBuilder('objective5', 'Descrease Cycle Time', 100),
+  chartBuilder('objective6', 'Control Infastructure Costs', 100),
+];
+
+charts.forEach(chart => {
+  c3.generate({
+    bindto: '#' + chart.domId,
+    data: {
+      columns: [
+        [chart.name, chart.percentComplete]
+      ],
+      type: 'gauge',
+    },
+    gauge: {
+    },
+    color: {
+      pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'],
+      threshold: {
+        values: [30, 60, 90, 100]
+      }
+    },
+    size: {
+      height: 180
+    }
+  });
+});
+  </script>
+</html>
