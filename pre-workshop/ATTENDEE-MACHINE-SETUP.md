@@ -23,6 +23,8 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
+Copy the Ubuntu icon to the desktop
+
 ## Azure CLI
 ``` bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
