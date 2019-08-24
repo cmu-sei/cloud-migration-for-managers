@@ -4,7 +4,6 @@
 - Windows 10
 - Windows Subsystem for Linux - Ubuntu
 - Docker for Desktop
-- Visual Studio Code
 - Chrome Browser
 
 ## WSL Ubuntu
