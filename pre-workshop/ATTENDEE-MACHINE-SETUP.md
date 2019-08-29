@@ -12,7 +12,7 @@
 Enter new UNIX username: scss-demo-user
 Enter new UNIX password: ILoveTheCloud
 
-sudo apt udpate
+sudo apt update
 sudo apt dist-upgrade -y
 sudo apt upgrade -y
 sudo apt autoremove -y
