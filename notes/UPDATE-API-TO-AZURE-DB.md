@@ -1,5 +1,5 @@
-Exercise 4 create Azure Database, this is the procedure to point the punny API
-to an azure DB.
+Exercise 4 creates an Azure Database. This is the procedure to point the punny
+API to an azure DB.
 
 1. Navigate to the Punny API folder
 1. Update `src/main/src/main/resources/application.properties`
