@@ -20,6 +20,11 @@
 ``` bash
 sh-keygen -t rsa -b 2048
 ```
+### Delete Repo
+``` bash
+rm -rf ~/cloud-migration-for-managers
+```
+
 ### Delete Azure DevOps account
 1. Navigate to
    [azure.microsoft.com/en-us/services/devops/repos/](https://azure.microsoft.com/en-us/services/devops/repos/)
