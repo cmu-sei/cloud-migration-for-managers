@@ -100,8 +100,6 @@ az login
     # Assign the reader role to the service principal
     az role assignment create --assignee $REG_APP_ID --role Reader --scope $ACRID
     ```
-
-## Create the Kubernetes cluster
 1. Create the cluster
     ``` bash
     az aks create --name $KUBE_CLUSTER --resource-group scss-demo \
