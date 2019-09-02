@@ -4,3 +4,5 @@
    [Instructions Here](./PI-SETUP.md)
 1. Each attendee machine must be configured. [Instructions
    Here](./ATTENDEE-MACHINE-SETUP.md)
+1. Setup required immediately before each workshop. [Instructions
+   Here](./WORKSHOP-SETUP.md)
