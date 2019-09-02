@@ -60,3 +60,57 @@ az group delete -n scss-demo
     ```bash
     ssh scss-user@$PUNNY_UI_IP
     ```
+
+### Generate the Kubernetes Cluster
+
+1. Log into the Azure CLI
+```bash
+az login
+# This will open a browser window, enter your supplied azure credentials
+```
+
+1. Each registry must have a unique name across all of Azure.
+    ```bash
+    CONTAINER_REG={TeamNameReg}
+    KUBE_CLUSTER={TeamNameCluster}
+    ```
+1. Create the registry
+    ``` bash
+    az acr create -n $CONTAINER_REG -g scss-demo -l eastus --sku standard
+    # It may appear as if the shell is hung for 2-3 minutes
+    # Pressing enter sometimes un-hangs it
+    # login to the registry so local docker commands can access it
+    az acr login -n $CONTAINER_REG
+    # ensure the registry was created
+    az acr list
+    # should display repository details
+    az acr repository list -n $CONTAINER_REG
+    # should display []
+    ```
+1. Create a service principal to allow Kubernetes to access the repository
+    ```bash
+    az ad sp create-for-rbac --skip-assignment
+    # Take note of the appId and password, for the next command
+    
+    REG_APP_ID={appID}
+    REG_PASSWORD={password}
+
+    ACRID=`az acr show --name $CONTAINER_REG --resource-group scss-demo --query id --output tsv`
+
+    # Assign the reader role to the service principal
+    az role assignment create --assignee $REG_APP_ID --role Reader --scope $ACRID
+    ```
+
+## Create the Kubernetes cluster
+1. Create the cluster
+    ``` bash
+    az aks create --name $KUBE_CLUSTER --resource-group scss-demo \
+    --node-count 1 --generate-ssh-keys \
+    --service-principal $REG_APP_ID \
+    --client-secret $REG_PASSWORD
+    # This will take 2-5 minutes to complete
+    ```
+1. Configure kubectl to point to the new cluster
+      ``` bash
+      az aks get-credentials --name $KUBE_CLUSTER --resource-group scss-demo
+      ```
