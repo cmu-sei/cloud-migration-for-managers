@@ -101,15 +101,15 @@ az group delete -n scss-demo
 1. Create the cluster
     ``` bash
     az aks create --name $KUBE_CLUSTER --resource-group scss-demo \
-    --node-count 1 --generate-ssh-keys \
-    --service-principal $REG_APP_ID \
-    --client-secret $REG_PASSWORD
+        --node-count 1 --generate-ssh-keys \
+        --service-principal $REG_APP_ID \
+        --client-secret $REG_PASSWORD
     # This will take 2-5 minutes to complete
     ```
 1. Configure kubectl to point to the new cluster
-      ``` bash
-      az aks get-credentials --name $KUBE_CLUSTER --resource-group scss-demo
-      ```
+    ``` bash
+    az aks get-credentials --name $KUBE_CLUSTER --resource-group scss-demo
+    ```
 1. Verify proper operation
     ``` bash
     kubectl get nodes

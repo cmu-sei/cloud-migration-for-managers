@@ -43,6 +43,8 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
     ```
 
 ## Local Kubernetes
+1. Docker Settings -> Kubernetes
+    - Ensure *Enable Kubernetes* is selected
 1. Install kubectl
     ``` bash
     sudo apt install apt-transport-https -y
@@ -54,7 +56,8 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
     # Copy kube config from windows
     mkdir ~/.kube
-    cp /mnt/c/Users/{username}/.kube/config ~/.kube/config
+    # Make sure to replay USER NAME with the machine user name
+    cp /mnt/c/Users/{USER NAME}/.kube/config ~/.kube/config
     ```
 1. Install kubectl bash completion
     ``` bash
@@ -64,7 +67,6 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
     kubectl completion bash >/etc/bash_completion.d/kubectl
     ```
 1. Restart the shell
-
 
 ## Notes
 - Azure CLI
