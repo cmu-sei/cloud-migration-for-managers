@@ -61,8 +61,7 @@ az group delete -n scss-demo
     ssh scss-user@$PUNNY_UI_IP
     ```
 
-### Generate the Kubernetes Cluster
-
+### Create the Kubernetes Cluster
 1. Log into the Azure CLI
     ```bash
     az login
