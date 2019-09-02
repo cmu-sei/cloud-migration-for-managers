@@ -120,3 +120,7 @@ az group delete -n scss-demo
     NAME                       STATUS   ROLES   AGE    VERSION
     aks-nodepool1-33265009-0   Ready    agent   3m5s   v1.13.10
     ```
+
+### Don't forget
+1. Place a post it note with the machine login credentials on the machine
+1. Place an azure creds text file on the desktop with credentials in it
