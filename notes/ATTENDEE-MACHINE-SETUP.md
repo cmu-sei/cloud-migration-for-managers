@@ -56,7 +56,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
     # Copy kube config from windows
     mkdir ~/.kube
-    # Make sure to replay USER NAME with the machine user name
+    # Make sure to replace USER NAME with the machine user name
     cp /mnt/c/Users/{USER NAME}/.kube/config ~/.kube/config
     ```
 1. Install kubectl bash completion
