@@ -2,6 +2,7 @@ Exercise 4 creates an Azure Database. This is the procedure to point the punny
 API to an azure DB.
 
 1. Navigate to the Punny API folder
+
 1. Update `src/main/src/main/resources/application.properties`
     ``` diff
     ## Spring  DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
@@ -14,14 +15,14 @@ API to an azure DB.
     - spring.datasource.password = scss-password
     + spring.datasource.password = scsspassword!1
     ```
+
 1. Make sure it's possible to connect to the pi
     ``` bash
     ssh pi@192.168.1.6
-
     # Password is IShouldBeInTheCloud
-
     exit
     ```
+
 1. Build and deploy
     ```bash
     ./pi_deploy.bash
