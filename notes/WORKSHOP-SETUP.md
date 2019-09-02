@@ -110,3 +110,13 @@ az group delete -n scss-demo
       ``` bash
       az aks get-credentials --name $KUBE_CLUSTER --resource-group scss-demo
       ```
+1. Verify proper operation
+    ``` bash
+    kubectl get nodes
+    ```
+
+    The output should be similar to:
+    ```bash
+    NAME                       STATUS   ROLES   AGE    VERSION
+    aks-nodepool1-33265009-0   Ready    agent   3m5s   v1.13.10
+    ```
