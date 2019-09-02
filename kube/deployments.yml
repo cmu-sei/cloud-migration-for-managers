@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: punny-api
-        image: <REGISTRY>.azurecr.io/punny-api:1.0
+        image: <REGISTRY>/punny-api:1.0
         ports:
         - containerPort: 8080
         imagePullPolicy: IfNotPresent
@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: punny-ui
-        image: <REGISTRY>.azurecr.io/punny-ui:1.0
+        image: <REGISTRY>/punny-ui:1.0
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
