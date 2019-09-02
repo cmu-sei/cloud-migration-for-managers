@@ -64,11 +64,10 @@ az group delete -n scss-demo
 ### Generate the Kubernetes Cluster
 
 1. Log into the Azure CLI
-```bash
-az login
-# This will open a browser window, enter your supplied azure credentials
-```
-
+    ```bash
+    az login
+    # This will open a browser window, enter your supplied azure credentials
+    ```
 1. Each registry must have a unique name across all of Azure.
     ```bash
     CONTAINER_REG={TeamNameReg}
