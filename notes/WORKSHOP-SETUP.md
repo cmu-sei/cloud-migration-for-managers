@@ -16,6 +16,10 @@
 
 ## For each Attendee Machine
 
+### Generate a SSH key
+``` bash
+sh-keygen -t rsa -b 2048
+```
 ### Delete Azure DevOps account
 1. Navigate to
    [azure.microsoft.com/en-us/services/devops/repos/](https://azure.microsoft.com/en-us/services/devops/repos/)
@@ -33,3 +37,26 @@ az login
 az group delete -n scss-demo
 ```
 
+### Recreate the Punny-UI VM
+1. Navigate to the Azure portal at
+   [portal.azure.com/](https://portal.azure.com/)
+1. Authenticate with the Azure credentials that this team is going to use.
+1. Choose [+ Create a Resource] in the upper left hand corner of the screen
+1. Choose *Ubuntu Server 18.04 LTS] from the list of popular resources
+1. Fill out the *Create a virtual machine* form
+    - *Resource group*: **scss-demo**
+    - *Virtual machine name*: **scss-demo-html**
+    - *Authentication Type*: **SSH public key**
+    - *Username*: **scss-user**
+    - *SSH public key*: Copy and paste the output of `cat ~/.ssh/id_rsa.pub`
+    - *Public inbound ports*: **Allow selected ports**
+    - *Select inbound ports*: **SSH, HTTP**
+    - Select default values for all other options
+1. Click [Review + create] button
+1. Click [Create] button
+1. Wait for the *Your deployment is underway* message to go away...
+1. Verify connectivity
+1. Connect to the server and install required libraries
+    ```bash
+    ssh scss-user@$PUNNY_UI_IP
+    ```
