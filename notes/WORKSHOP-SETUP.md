@@ -25,6 +25,21 @@ sh-keygen -t rsa -b 2048
 rm -rf ~/cloud-migration-for-managers
 ```
 
+### Hydrate NPM and Gradle
+``` bash
+git clone https://github.com/dalealleshouse/cloud-migration-for-managers.git
+
+cd ~/cloud-migration-for-managers/punny-ui
+npm install
+npm run build
+
+cd ~/cloud-migration-for-managers/punny-api/
+./gradlew build
+
+cd ~/
+rm -rf cloud-migration-for-managers
+```
+
 ### Delete Azure DevOps account
 1. Navigate to
    [azure.microsoft.com/en-us/services/devops/repos/](https://azure.microsoft.com/en-us/services/devops/repos/)
