@@ -18,5 +18,5 @@ conception of the cloud while enjoying lighthearted fun.
 
 ## Workshop Content
 Navigate to the
-[Wiki](https://github.com/dalealleshouse/cloud-migration-for-managers/wiki) for
+[Wiki](https://github.com/cmu-sei/cloud-migration-for-managers/wiki) for
 workshop content.
